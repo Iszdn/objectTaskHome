@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Book {
+        constructor(name, author, date, price) {
+          this.name = name;
+            this.author = author;
+            this.date = date;
+            this.price = price;
+        }
+        qiymetIste(endirim) {
+          const discountedPrice = this.price - (this.price * endirim);
+          console.log(`Book name: ${this.name}`);
+          console.log(`Author name: ${this.author}`);
+          console.log(`Date: ${this.date}`);
+          console.log(`Book price: ${this.price} manat`);
+          console.log(`Discounted price: ${discountedPrice} manat`);
+        }
+      }
+
+      const myBook = new Book("Anna Karenina", "Lev Tolstoy", "1878", 15);
+      myBook.qiymetIste(0.1);
+    </script>
+  </body>
+</html>
